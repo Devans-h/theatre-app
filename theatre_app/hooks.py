@@ -1,7 +1,7 @@
 app_name = "theatre_app"
-app_title = "Theatre "
+app_title = "Theatre App"
 app_publisher = "Devansh"
-app_description = "a booking system"
+app_description = "Theatre Ticket Booking System"
 app_email = "dev.gohil012@gmail.com"
 app_license = "mit"
 
@@ -192,23 +192,14 @@ use_json_request_body = True
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"theatre_app.tasks.all"
-# 	],
-# 	"daily": [
-# 		"theatre_app.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"theatre_app.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"theatre_app.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"theatre_app.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"cron": {
+		# Run every minute to expire stale seat reservations
+		"* * * * *": [
+			"theatre_app.tasks.expire_reservations"
+		],
+	},
+}
 
 # Testing
 # -------

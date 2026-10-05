@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-10-05 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "movie",
+  "theatre",
+  "screen",
+  "col_break_1",
+  "show_date",
+  "start_time",
+  "end_time",
+  "status"
+ ],
+ "fields": [
+  {
+   "default": "SHOW-.YYYY.-.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SHOW-.YYYY.-.####"
+  },
+  {
+   "fieldname": "movie",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Movie",
+   "options": "Movie",
+   "reqd": 1
+  },
+  {
+   "fieldname": "theatre",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Theatre",
+   "options": "Theatre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "screen",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Screen",
+   "options": "Screen",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "show_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Show Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Scheduled\nCancelled\nCompleted"
+  }
+ ],
+ "links": [],
+ "modified": "2026-10-05 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Theatre",
+ "name": "Show",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Theatre Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Theatre User",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "show_date",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "movie"
+}

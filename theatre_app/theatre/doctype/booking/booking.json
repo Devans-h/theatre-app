@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-10-05 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "show",
+  "status",
+  "reservation_expires_at",
+  "seats_section",
+  "seats",
+  "pricing_section",
+  "subtotal",
+  "coupon",
+  "discount",
+  "tax",
+  "grand_total",
+  "invoice_section",
+  "sales_invoice"
+ ],
+ "fields": [
+  {
+   "default": "BOOK-.YYYY.-.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "BOOK-.YYYY.-.####"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "show",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Show",
+   "options": "Show",
+   "reqd": 1
+  },
+  {
+   "default": "Reserved",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Reserved\nConfirmed\nExpired\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reservation_expires_at",
+   "fieldtype": "Datetime",
+   "label": "Reservation Expires At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "seats_section",
+   "fieldtype": "Section Break",
+   "label": "Seats"
+  },
+  {
+   "fieldname": "seats",
+   "fieldtype": "Table",
+   "label": "Seats",
+   "options": "Booking Seat"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "subtotal",
+   "fieldtype": "Currency",
+   "label": "Subtotal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "coupon",
+   "fieldtype": "Link",
+   "label": "Coupon",
+   "options": "Coupon"
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Currency",
+   "label": "Discount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax",
+   "fieldtype": "Currency",
+   "label": "Tax",
+   "read_only": 1
+  },
+
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-10-05 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Theatre",
+ "name": "Booking",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Theatre Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Theatre User",
+   "share": 1,
+   "write": 1,
+   "if_owner": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "customer"
+}

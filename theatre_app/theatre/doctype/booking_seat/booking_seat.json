@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "creation": "2026-10-05 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "seat",
+  "seat_number",
+  "price"
+ ],
+ "fields": [
+  {
+   "fieldname": "seat",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Seat",
+   "options": "Seat",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seat_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Seat Number",
+   "read_only": 1,
+   "fetch_from": "seat.seat_number"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price",
+   "read_only": 1,
+   "fetch_from": "seat.price"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-05 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Theatre",
+ "name": "Booking Seat",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
